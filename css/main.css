@@ -1155,6 +1155,9 @@ option {
 .project-title {
   font-size: 1.33333em;
   margin: 0; }
+  .project-title small {
+    opacity: 0.5;
+    font-weight: normal; }
 
 .project-thumbnail {
   border: 0;
@@ -1177,8 +1180,8 @@ option {
     top: 0;
     visibility: hidden;
     z-index: 1;
-    -webkit-transition: .3s ease;
-    transition: .3s ease; }
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease; }
   .project-thumbnail img {
     height: 100%;
     left: 0;
@@ -1207,7 +1210,9 @@ option {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     margin-left: -0.83333em;
-    margin-right: -0.83333em; }
+    margin-right: -0.83333em;
+    align-items: center;
+    justify-content: center; }
     .portfolio-feed .project {
       box-sizing: border-box;
       -webkit-box-flex: 0;
@@ -1222,11 +1227,11 @@ option {
       -ms-flex-preferred-size: 60%;
       flex-basis: 60%;
       max-width: 60%; }
-      .portfolio-feed.layout-mosaic .project:nth-child(4n+2), .portfolio-feed.layout-mosaic .project:nth-child(4n+3) {
+      .portfolio-feed.layout-mosaic .project:nth-child(4n + 2), .portfolio-feed.layout-mosaic .project:nth-child(4n + 3) {
         -ms-flex-preferred-size: 40%;
         flex-basis: 40%;
         max-width: 40%; }
-        .portfolio-feed.layout-mosaic .project:nth-child(4n+2) .project-thumbnail:before, .portfolio-feed.layout-mosaic .project:nth-child(4n+3) .project-thumbnail:before {
+        .portfolio-feed.layout-mosaic .project:nth-child(4n + 2) .project-thumbnail:before, .portfolio-feed.layout-mosaic .project:nth-child(4n + 3) .project-thumbnail:before {
           padding-top: calc(90% + 9px); }
     .portfolio-feed .project-header {
       box-sizing: border-box;
@@ -1242,8 +1247,8 @@ option {
       z-index: 2; }
     .portfolio-feed .project-title {
       opacity: 0;
-      -webkit-transition: opacity .3s;
-      transition: opacity .3s; }
+      -webkit-transition: opacity 0.3s;
+      transition: opacity 0.3s; }
     .portfolio-feed .project-link {
       color: #fff; }
       .portfolio-feed .project-link:hover .project-title, .portfolio-feed .project-link:focus .project-title {
@@ -1337,10 +1342,13 @@ option {
   margin-bottom: 1.33333em; }
 
 /* Hero section */
-.block-hero .block-header {
-  margin-bottom: 0.83333em; }
-.block-hero .block-title {
-  font-size: 2.44444em; }
+.block-hero {
+  margin-left: auto;
+  margin-right: auto; }
+  .block-hero .block-header {
+    margin-bottom: 0.83333em; }
+  .block-hero .block-title {
+    font-size: 2.44444em; }
 
 /* Portfolio section */
 .view-all-button {
@@ -1372,8 +1380,8 @@ option {
     height: 32%;
     left: 0;
     position: absolute;
-    transition: .3s ease;
-    -webkit-transition: .3s ease;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
     width: 100%; }
     .accent-green .view-all-button:before, .accent-green .view-all-button:after {
       border-color: #0da5b1; }
