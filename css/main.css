@@ -32,7 +32,7 @@ pre,
 code,
 kbd,
 samp {
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: 1em; }
 
 audio,
@@ -66,7 +66,7 @@ abbr[title] {
 
 b,
 strong {
-  font-weight: bold; }
+  font-weight: 600; }
 
 dfn {
   font-style: italic; }
@@ -162,7 +162,7 @@ textarea {
   overflow: auto; }
 
 optgroup {
-  font-weight: bold; }
+  font-weight: 600; }
 
 progress {
   display: inline-block;
@@ -176,7 +176,7 @@ table {
  * General
  */
 html {
-  font-family: "Karla", sans-serif;
+  font-family: "Muli", sans-serif;
   font-size: 112.5%;
   font-weight: normal;
   height: 100%;
@@ -216,7 +216,7 @@ a {
     color: #bec5cb; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.1;
   margin: 2.5rem 0 0.83333rem;
   text-rendering: optimizeLegibility; }
@@ -338,7 +338,7 @@ dl {
   margin: 0; }
 
 dt {
-  font-weight: bold; }
+  font-weight: 600; }
 
 dd {
   margin: 0 0 1.66667em; }
@@ -382,7 +382,7 @@ th, td {
     border-bottom-color: #373e44; }
 
 th {
-  font-weight: bold; }
+  font-weight: 600; }
   .palette-dark th {
     color: #fff; }
 
@@ -421,7 +421,7 @@ img {
   display: -ms-inline-flexbox;
   display: inline-flex;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -430,8 +430,8 @@ img {
   position: relative;
   text-align: center;
   text-decoration: none;
-  -webkit-transition: .3s ease;
-  transition: .3s ease; }
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease; }
   .accent-green .button {
     color: #0da5b1; }
   .accent-blue .button {
@@ -448,8 +448,8 @@ img {
     height: 32%;
     left: 0;
     position: absolute;
-    transition: .3s ease;
-    -webkit-transition: .3s ease;
+    transition: 0.3s ease;
+    -webkit-transition: 0.3s ease;
     width: 100%; }
   .button:before {
     border-bottom: 0;
@@ -557,7 +557,7 @@ img {
  */
 label {
   display: inline-block;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.5;
   margin-bottom: 0.25em; }
   .palette-dark label {
@@ -612,8 +612,8 @@ option {
     height: 2px;
     left: 0;
     position: absolute;
-    -webkit-transition: width .3s;
-    transition: width .3s;
+    -webkit-transition: width 0.3s;
+    transition: width 0.3s;
     width: 0; }
     .accent-green .form-group .animate-border {
       background: #0da5b1; }
@@ -639,7 +639,7 @@ option {
     padding-right: 20px; }
   .form-select-wrap:before, .form-select-wrap:after {
     border: solid transparent;
-    border-width: .3125em;
+    border-width: 0.3125em;
     box-sizing: border-box;
     content: "";
     position: absolute;
@@ -648,12 +648,12 @@ option {
     z-index: 1; }
   .form-select-wrap:before {
     border-top-color: #86939d;
-    margin-top: .125em; }
+    margin-top: 0.125em; }
     .palette-dark .form-select-wrap:before {
       border-top-color: #606c76; }
   .form-select-wrap:after {
     border-bottom-color: #86939d;
-    margin-top: -.75em; }
+    margin-top: -0.75em; }
     .palette-dark .form-select-wrap:after {
       border-bottom-color: #606c76; }
 
@@ -662,7 +662,7 @@ option {
   position: relative; }
   .form-checkbox label {
     font-weight: normal; }
-  .form-checkbox input[type=checkbox] {
+  .form-checkbox input[type="checkbox"] {
     height: 1.5em;
     left: 0;
     position: absolute;
@@ -858,15 +858,14 @@ option {
     max-height: 2.5em; }
 
 .site-title {
-  font-weight: bold;
+  font-weight: normal;
   line-height: 1.5;
-  margin: 0;
-  font-size: 1.5em; }
+  margin: 0; }
   .site-title a {
     padding: 0 !important;
     display: inline-block;
     vertical-align: middle;
-    font-size: 1.5em; }
+    font-size: 2.4em; }
     .accent-green .site-title a {
       background: #0da5b1; }
     .accent-blue .site-title a {
@@ -877,6 +876,12 @@ option {
       background: #ed9700; }
     .site-title a:hover {
       color: #e394b0 !important; }
+    @media only screen and (max-width: 450px) {
+      .site-title a {
+        font-size: 1.888888em; } }
+    @media only screen and (max-width: 320px) {
+      .site-title a {
+        font-size: 1.5em; } }
   .site-title .logo {
     vertical-align: middle;
     height: 75px;
@@ -972,6 +977,13 @@ option {
     z-index: 998; }
     .palette-dark .site-header:after {
       background: rgba(5, 5, 6, 0.6); }
+
+  .site-title .logo {
+    vertical-align: middle;
+    height: 50px;
+    width: 50px;
+    display: none;
+    margin-right: 5px; }
 
   #menu-open {
     display: block;
@@ -1148,16 +1160,24 @@ option {
     color: #272c30; }
     .palette-dark .project .project-link {
       color: #fff; }
+  .project#project-planemo .project-title span {
+    font-family: "Megrim", cursive;
+    font-weight: normal; }
 
 .project-header {
   margin-top: 0.83333em; }
 
 .project-title {
-  font-size: 1.33333em;
   margin: 0; }
+  .project-title span {
+    font-size: 1.75em; }
   .project-title small {
+    font-size: 0.75em;
+    display: block;
+    margin-top: 0.5em;
     opacity: 0.5;
-    font-weight: normal; }
+    font-weight: normal;
+    line-height: 1.5em; }
 
 .project-thumbnail {
   border: 0;
@@ -1194,6 +1214,10 @@ option {
     -webkit-transition: 1s ease;
     transition: 1s ease;
     width: 100%; }
+    @media only screen and (max-width: 761px) {
+      .project-thumbnail img {
+        -webkit-transform: scale(1.05, 1.05);
+        transform: scale(1.05, 1.05); } }
 
 .project-link {
   display: block;
@@ -1249,6 +1273,9 @@ option {
       opacity: 0;
       -webkit-transition: opacity 0.3s;
       transition: opacity 0.3s; }
+      .portfolio-feed .project-title small {
+        margin-right: 2em;
+        margin-left: 2em; }
     .portfolio-feed .project-link {
       color: #fff; }
       .portfolio-feed .project-link:hover .project-title, .portfolio-feed .project-link:focus .project-title {
@@ -1298,7 +1325,7 @@ option {
   .block-buttons a,
   .grid-item-buttons a {
     font-size: 16px;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 0.9375em;
     margin-right: 20px; }
     .block-buttons a:not(.button),
@@ -1310,7 +1337,7 @@ option {
   box-sizing: border-box;
   display: inline-block;
   font-size: 1.33333em;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.5;
   margin-bottom: 1em;
   padding: 0.58333em 0;
@@ -1349,6 +1376,9 @@ option {
     margin-bottom: 0.83333em; }
   .block-hero .block-title {
     font-size: 2.44444em; }
+  .block-hero .block-content {
+    font-size: 1.2em;
+    color: #86939d !important; }
 
 /* Portfolio section */
 .view-all-button {
@@ -1356,7 +1386,7 @@ option {
   color: #e394b0;
   display: inline-block;
   font-size: 16px;
-  font-weight: bold;
+  font-weight: 600;
   line-height: 1.2;
   padding: 0.9em 1em;
   left: 50%;
@@ -1432,7 +1462,7 @@ option {
 
 .testimonial-author {
   font-size: 0.88889em;
-  font-weight: bold;
+  font-weight: 600;
   margin: 0; }
 
 @media only screen and (max-width: 600px) {
