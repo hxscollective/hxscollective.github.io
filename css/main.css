@@ -886,14 +886,7 @@ option {
     vertical-align: middle;
     height: 75px;
     width: 75px;
-    display: none;
     margin-right: 5px; }
-  .site-title .logo.grayscale {
-    display: inline-block; }
-  .site-title:hover .logo.grayscale {
-    display: none; }
-  .site-title:hover .logo.color {
-    display: inline-block; }
 
 .menu {
   list-style: none;
@@ -979,11 +972,7 @@ option {
       background: rgba(5, 5, 6, 0.6); }
 
   .site-title .logo {
-    vertical-align: middle;
-    height: 50px;
-    width: 50px;
-    display: none;
-    margin-right: 5px; }
+    margin-right: 0px; }
 
   #menu-open {
     display: block;
